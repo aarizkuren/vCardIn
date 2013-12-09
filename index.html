@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>vCardIn</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vCard.js"></script>
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="lungo/lungo.css">
+    <link rel="stylesheet" href="lungo/lungo.icon.css">
+    <link rel="stylesheet" href="lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="lungo/theme.lungo.css">
+  </head>
+
+  <body class="app">
+      <section id="main" data-transition="fade">
+        <header data-title="vCardIn">
+          <nav>
+              <a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fgithub.com%2Felecay%2FvCardIn%2F&text=%23vCardIn, a %23FirefoxOS app for importing contacts from a .vcf file http%3A%2F%2Fwww.prottotipo.com/vcardin via %40elecay" data-icon="brand twitter" class="right" target="_blank"></a>
+              <a href="#" id="refreshBtn" data-icon="refresh" class="right"></a>
+          </nav>
+        </header>
+        <article id="main-article" data-type="list" class="active dark list indented scroll">
+          <ul id="item-list"></ul>
+          <ul>
+            <li class="dark">
+              <a href="#" id="importSelectedBtn" class="button accept">
+                 Import selected
+              </a>
+            </li>
+            <li class="dark">
+              <a href="#" id="deleteAllBtn" class="button cancel" data-router="section">
+                 Delete all contacts
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section role="region" id="progress" data-transition="fade">
+        <article id="progress-article" class="active">
+          <form role="dialog" data-type="confirm">
+            <section>
+              <h1>Importing... Please wait...</h1>
+              <p role="status">
+                <span id="porc">0%</span>
+              <progress id="progressbar" value="0" max="100"></progress>
+              </p>
+            </section>
+          </form>
+        </article>
+      </section>
+    
+    <script type="text/javascript" src="js/engine.js"></script>
+    <script type="text/javascript" src="quojs/quo.js"></script>
+    <script type="text/javascript" src="lungo/lungo.js"></script>
+  </body>
+</html>
